@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root {
+    --color-primaria: #E5E5E5;
+    --color-secundaria: #0A3871;
+    --color-terciaria: #495057;
+    --color-hover: #0A3871;
+
+    --fuente-inter: "Inter", sans-serif;
+}
+
+body{
+    box-sizing: border-box;
+    background-color: var(--color-primaria);
+    color: var(--color-secundaria);
+}
+
+.header{
+    padding: 2% 2% 0% 5%;
+}
+
+.presentacion{
+    padding: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.presentacion__input{
+    border: 0;
+    width: 100%;
+    padding: 0% 0% 50% 0%;
+    background-color: var(--color-primaria);
+    color: var(--color-secundaria);
+    font-size: 32px;
+    font-family: var(--fuente-inter);
+    outline: none;
+    
+}
+
+.presentacion__input::placeholder{
+    color: var(--color-secundaria);
+}
+
+
+
+
+
+.presentacion__texto{
+    padding: 10%;
+    width: 75%;
+}
+
+.presentación__texto__alerta{
+    display: flex;
+    flex-direction: center;
+    color: var(--color-terciaria);
+    font-size: 12px;
+    gap: 5px;
+}
+
+
+
+.presentacion__botones{
+    display: flex;
+    flex-direction: center;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+}
+.presentacion__botones__funcion{
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    border: 2px solid var(--color-terciaria);
+    width: 50%;
+    text-align: center;
+    border-radius: 8px;
+    font-weight: 600;
+    padding: 21.5px 0;
+    text-decoration: none;
+    color: var(--color-secundaria);
+    font-size: 16;
+    font-family: var(--fuente-inter);
+}
+
+.presentacion__botones__funcion:hover{
+    background-color: var(--color-hover);
+    color: white;
+}
+
+.presentacion__encriptado{
+    width: 25%;
+    background-color: white;
+    border-radius: 32px;
+    padding: 5%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    
+}
+
+.presentacion__encriptado__texto{
+    font-size: 24px;
+    font-family: var(--fuente-inter);
+    color: var(--color-terciaria);
+}
+.presentacion__encriptado__parrafo{
+    font-size: 16px;
+    font-family: var(--fuente-inter);
+    color: var(--color-terciaria);
+}
+
+.footer{
+    color:var(--color-primaria);
+    background-color: var(--color-terciaria);
+    padding: 24px;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 400;
+    font-family: var(--fuente-inter);
+}
