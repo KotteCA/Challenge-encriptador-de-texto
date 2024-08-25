@@ -29,21 +29,30 @@ function encriptar(){
 function desencriptar(){
     let texto = document.getElementById("valorTexto").value;
     let arregloTextoEncriptado = [];
+    let encontrar = false;
     if(validar(texto)){
         let cont = 0;
         while(cont<texto.length){
+            encontrar = false;
+            console.log(`contador: ${cont}`);
             for(let i = 0; i<diccionario.length; i++){
-                console.log(`${diccionario[i][1]} == ${texto.substring(cont,diccionario[i][1].length)}`)
-                if(diccionario[i][1]==(texto.substring(cont,diccionario[i][1].length))){
+                console.log(`${diccionario[i][1]} == ${texto.substring(cont,diccionario[i][1].length+cont)}`);
+                if(diccionario[i][1] == (texto.substring(cont,diccionario[i][1].length+cont))){
                     arregloTextoEncriptado.push(diccionario[i][0]);
-                    cont = cont+diccionario[i][0].length;
+                    cont = cont+diccionario[i][1].length;
+                    console.log(`arreglo texto: ${arregloTexto(arregloTextoEncriptado)}`);
+                    encontrar = true;
                     break;
                 }
             }
-            if(cont<texto.length){
-                arregloTextoEncriptado.push(texto[cont+1]);
+            if(!encontrar){
+                arregloTextoEncriptado.push(texto[cont]);
+                cont++;
+                console.log(`arreglo texto: ${arregloTexto(arregloTextoEncriptado)}`);
+                encontrar = false;
             }
         }
+        console.log(arregloTexto(arregloTextoEncriptado));
     }
 }
 
