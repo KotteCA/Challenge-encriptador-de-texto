@@ -13,11 +13,11 @@
     </header>
     <main class="presentacion">
         <section class="presentacion__texto">
-            <input class="presentacion__input" type="text" placeholder="Ingrese el texto aqui">
+            <input id="valorTexto" class="presentacion__input" type="text" placeholder="Ingrese el texto aqui">
             <h2 class="presentación__texto__alerta"><img src="assets/Group.png" alt="">Solo letras minúsculas y sin acentos</h2>
             <div class="presentacion__botones">
-                <a class="presentacion__botones__funcion">Encriptar</a>
-                <a class="presentacion__botones__funcion">Desencriptar</a>
+                <a onclick="encriptar()" class="presentacion__botones__funcion">Encriptar</a>
+                <a onclick="desencriptar()" class="presentacion__botones__funcion">Desencriptar</a>
             </div>
         </section>
         <div class="presentacion__encriptado">
@@ -29,5 +29,6 @@
     <footer class="footer">
         <p>Challenge desarrollado por María José Carvajal</p>
     </footer>
+    <script src="app.js"></script>
 </body>
 </html>
