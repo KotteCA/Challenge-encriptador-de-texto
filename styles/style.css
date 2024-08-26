@@ -1,12 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
+
 :root {
     --color-primaria: #E5E5E5;
     --color-secundaria: #0A3871;
     --color-terciaria: #495057;
     --color-hover: #0A3871;
-
     --fuente-inter: "Inter", sans-serif;
+}
+
+#presentacion__encriptado__con__texto{
+    display: none;
 }
 
 body{
@@ -43,9 +47,6 @@ body{
 }
 
 
-
-
-
 .presentacion__texto{
     padding: 10%;
     width: 75%;
@@ -58,8 +59,6 @@ body{
     font-size: 12px;
     gap: 5px;
 }
-
-
 
 .presentacion__botones{
     display: flex;
@@ -96,19 +95,53 @@ body{
     padding: 5%;
     display: flex;
     flex-direction: column;
-    text-align: center;
-    
+      
 }
 
 .presentacion__encriptado__texto{
     font-size: 24px;
     font-family: var(--fuente-inter);
     color: var(--color-terciaria);
+    text-align: center; 
 }
 .presentacion__encriptado__parrafo{
     font-size: 16px;
     font-family: var(--fuente-inter);
     color: var(--color-terciaria);
+    text-align: center; 
+}
+
+.presentacion__encriptado__con__texto{
+    text-align: right;
+}
+
+.presentacion__encriptado__con__texto__procesado{
+    font-size: 24px;
+    font-family: var(--fuente-inter);
+    color: var(--color-terciaria);
+    padding: 0% 0% 100% 0%;
+    font-style: normal;
+}
+
+.presentacion__encriptado__con__texto__boton{
+    display: flex;
+    padding: 0% 0% 0% 25%;
+    justify-content: center;
+    gap: 16px;
+    border: 2px solid var(--color-terciaria);
+    width: 50%;
+    text-align: center;
+    border-radius: 8px;
+    font-weight: 600;
+    padding: 21.5px 0;
+    text-decoration: none;
+    color: var(--color-secundaria);
+    font-size: 16;
+    font-family: var(--fuente-inter);
+}
+.presentacion__encriptado__con__texto__boton:hover{
+    background-color: var(--color-hover);
+    color: white;
 }
 
 .footer{

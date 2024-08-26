@@ -21,9 +21,16 @@
             </div>
         </section>
         <div class="presentacion__encriptado">
-            <img class="presentacion__encriptado__img" src="assets/Muñeco.png">
-            <h2 class="presentacion__encriptado__texto">Ningún mensaje fue encontrado</h2>
-            <p class="presentacion__encriptado__parrafo">Ingresa el texto que desees encriptar o desencriptar.</p>
+            <div id="presentacion__encriptado__sin__texto">
+                <img class="presentacion__encriptado__img" src="assets/Muñeco.png">
+                <h2 class="presentacion__encriptado__texto">Ningún mensaje fue encontrado</h2>
+                <p class="presentacion__encriptado__parrafo">Ingresa el texto que desees encriptar o desencriptar.</p>
+            </div>
+            <div id="presentacion__encriptado__con__texto">
+                <h2 id="textoProcesado" class="presentacion__encriptado__con__texto__procesado"></h2>
+                <a onclick="copiar()" class="presentacion__encriptado__con__texto__boton">Copiar</a>
+            </div>
+            
         </div>
     </main>
     <footer class="footer">
