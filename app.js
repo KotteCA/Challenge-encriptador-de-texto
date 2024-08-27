@@ -2,14 +2,22 @@ let diccionario = [["a","ai"],["e","enter"],["i","imes"],["o","ober"],["u","ufat
 
 function validar(texto){
     if(texto!=""){
-        document.getElementById("presentacion__encriptado__sin__texto").style.display = 'none';
-        document.getElementById("presentacion__encriptado__con__texto").style.display = 'block';
-        
+        if (!(/[^a-zA-Z]/.test((texto.replace(/ /g, ""))))&&(texto.toLowerCase()===texto)) {
+            document.getElementById("presentacion__encriptado__sin__texto").style.display = 'none';
+            document.getElementById("presentacion__encriptado__con__texto").style.display = 'block';
+            return true;
+        }else{
+            alert("Solo letras minúsculas y sin acentos");
+            document.getElementById("presentacion__encriptado__sin__texto").style.display = 'block';
+            document.getElementById("presentacion__encriptado__con__texto").style.display = 'none';
+            return false;
+        }
     }else{
         document.getElementById("presentacion__encriptado__sin__texto").style.display = 'block';
         document.getElementById("presentacion__encriptado__con__texto").style.display = 'none';
+        return false;
     }
-    return true;
+   
 }
 
 function encriptar(){
@@ -27,7 +35,6 @@ function encriptar(){
                 arregloTextoEncriptado.push(texto[i]);
             }
         }
-        //modificar recuadro
         arregloTexto(arregloTextoEncriptado);
     }
 }
@@ -55,7 +62,6 @@ function desencriptar(){
                 encontrar = false;
             }
         }
-        //Modificar recuadro
         arregloTexto(arregloTextoEncriptado);
     }
 }
